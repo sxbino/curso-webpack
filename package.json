@@ -9,14 +9,21 @@
     "dev": "webpack --config webpack.config.dev.js",
     "build:watch" : "webpack --watch --config webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.comt/gndx/js-portfolio.gi"
+  },
   "keywords": [
     "javascript",
     "html",
     "css"
   ],
-  "author": "",
+  "author": "oscar barajas <oscar@gndx.dev>",
   "license": "MIT",
-  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/gndx/js-portfolio/issues"
+  },
+  "homepage": "https://github.com/gndx/js-portfolio#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.10",
