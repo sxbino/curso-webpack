@@ -40,8 +40,8 @@ module.exports = {
         }
       }, 
       {
-        test: /\.css$/,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
+        test: /\s?.css$/,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ],
       },
       {
         test: /\.png/,
@@ -86,6 +86,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     historyApiFallback: true,
-    port: 3006,
+    port: 3056,
   },
 };
