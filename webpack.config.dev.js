@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   stats: {
@@ -18,6 +19,7 @@ module.exports = {
     assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   mode: 'development',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.js'], // LOS ARCHIVOS QUE WEBPACK VA A LEER
     alias: {
@@ -81,11 +83,12 @@ module.exports = {
       ]
     }),
     new Dotenv(),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     historyApiFallback: true,
-    port: 3056,
+    port: 3057,
   },
 };
